@@ -37,40 +37,58 @@
     
 
         <!-- Form -->
-        <div class="container">
-          <div style="text-align:center">
-            <h2>Contact Us</h2>
-            <p>Diamond Valley, Barbados</p>
+        <div class="container4">
+          <divstyle="text-align:center">
+            <h2 class="lead">Contact Us</h2>
+            <p class="lead">Diamond Valley, Barbados</p>
             <p>(704) 971-2300</p>
             <p>bhs.rns@gmail.com</p>
           </div>
           <div class="row">
             <div class="column">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158170.602438572!2d-59.626594837899674!3d13.190508154365478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c43f1fbae321aa3%3A0xeec51b38cf4362b!2sBarbados!5e0!3m2!1sen!2sus!4v1564151206471!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158170.602438572!2d-59.626594837899674!3d13.190508154365478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c43f1fbae321aa3%3A0xeec51b38cf4362b!2sBarbados!5e0!3m2!1sen!2sus!4v1564151206471!5m2!1sen!2sus" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="column">
-              <form action="/action_page.php">
+              <form class=".needs-validation" action="/action_page.php">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Enter First Name">
+                <input type="text" id="fname" name="firstname" placeholder="Enter First Name" required>
                 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Enter Last Name">
+                <input type="text" id="lname" name="lastname" placeholder="Enter Last Name" required>
                 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email">
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
                 
                 <label for="subject">Subject</label>
-                <input type="subject" id="subject" name="subject" placeholder="Enter Subject">
+                <input type="subject" id="subject" name="subject" placeholder="Enter Subject" required>
                 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write something you liked about this Travel Guide.." style="height:170px"></textarea>
+                <textarea id="message" name="message" placeholder="Write something you liked about this page." style="height:170px"></textarea>
                 <input type="submit" value="Submit">
               </form>
             </div>
           </div>
         </div>   
         
-
+        <script>
+        
+          function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            var x = document.forms["myForm"]["lname"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            var x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            
+              return false;
+            }
+          }</script>
    <!-- jQuery -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <!-- Popper.js -->
@@ -78,4 +96,49 @@
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fab fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: Biridiana Hinojosa</div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 </html>
